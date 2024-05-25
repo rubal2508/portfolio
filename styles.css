@@ -74,3 +74,17 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+#about a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007acc;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#about a:hover {
+    background-color: #005fa3;
+}
