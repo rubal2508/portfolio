@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(data => {
         console.log('Response:', data);
         if (data.updated_hits !== undefined) {
-            counterElement.textContent = `Number of website hits: ${data.updated_hits}`;
+            counterElement.textContent = `Number of website hits (Powered by Amazon Lambda):  ${data.updated_hits}`;
         } else {
             counterElement.textContent = 'Error loading hit counter';
         }
