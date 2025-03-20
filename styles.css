@@ -75,6 +75,12 @@ a:hover {
     text-decoration: underline;
 }
 
+.resume-links {
+    display: flex;
+    gap: 1rem; /* Space between buttons */
+    margin-top: 1rem;
+}
+
 #about a {
     display: inline-block;
     margin-top: 1rem;
