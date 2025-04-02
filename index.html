@@ -17,6 +17,24 @@
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-brand">AG</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
     <header>
         <img src="profilepic.jpg" alt="Aman Garg">
         <h1>Aman Garg</h1>
@@ -105,10 +123,23 @@
 
     <br><br><br><br>
 
-    <!-- <footer>
-        <p id="hitCounter">Loading...</p>
-        <script src="counter.js"></script>
-    </footer> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            navToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
