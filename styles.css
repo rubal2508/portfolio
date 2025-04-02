@@ -278,15 +278,17 @@ a:hover {
 
 #about a {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.25rem;
     background-color: var(--primary-color);
     color: #fff;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.2s ease;
-    min-width: 200px;
+    width: 100%;
+    max-width: 300px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 #about a:hover {
@@ -331,19 +333,20 @@ a:hover {
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--light-text);
     text-align: center;
-    padding: 1rem 0;
-    position: fixed;
+    padding: 0.75rem 0;
     width: 100%;
-    bottom: 0;
-    left: 0;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(5px);
+    margin-top: 2rem;
 }
 
 footer p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -377,8 +380,8 @@ footer p {
     }
 
     #about a {
-        width: 100%;
-        max-width: 300px;
+        padding: 0.75rem 1rem;
+        max-width: 250px;
     }
 }
 
