@@ -129,36 +129,57 @@ body {
 header {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: #fff;
-    padding: 3rem 0;
+    padding: 4rem 2rem;
     text-align: center;
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1), transparent 60%);
+    pointer-events: none;
 }
 
 header img {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    margin-bottom: 1.5rem;
-    border: 4px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
 }
 
 header img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(2deg);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 700;
     letter-spacing: -0.025em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header p {
-    margin: 0.5rem 0 0;
-    font-size: 1.3rem;
-    opacity: 0.9;
+    margin: 1rem 0 0;
+    font-size: 1.4rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section {
@@ -308,16 +329,21 @@ footer p {
 
 @media (max-width: 768px) {
     header {
-        padding: 2rem 0;
+        padding: 3rem 1rem;
     }
 
     header img {
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
     }
 
     header h1 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        padding: 0 1rem;
     }
 
     section {
