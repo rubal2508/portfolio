@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
+    --primary-color:  #00509d; /* #2563eb; */
+    --secondary-color: #00296b; /* #1e40af; */
     --text-color: #1f2937;
     --light-text: #6b7280;
     --background: #f3f4f6;
@@ -393,12 +393,34 @@ html {
     background: var(--card-bg);
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: all 0.2s ease;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    position: relative;
 }
 
 .project-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.project-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.2s ease;
+}
+
+.project-item:hover::after {
+    width: 100%;
 }
 
 .project-item h3 {
