@@ -223,6 +223,7 @@ section h4 {
 section ul {
     list-style-type: none;
     padding-left: 0;
+    margin: 0.5rem 0;
 }
 
 section ul li {
@@ -237,6 +238,24 @@ section ul li:before {
     position: absolute;
     left: 0;
     font-weight: bold;
+}
+
+section ul ul {
+    margin: 0.75rem 0 0.75rem 1rem;
+    padding-left: 0;
+}
+
+section ul ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
+}
+
+section ul ul li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: normal;
 }
 
 a {
@@ -366,4 +385,72 @@ footer p {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--navbar-height);
+}
+
+.project-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.4rem;
+}
+
+.project-item h3 a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.project-item h3 a:hover {
+    color: var(--secondary-color);
+}
+
+.project-item p {
+    margin: 0 0 1rem 0;
+    color: var(--text-color);
+}
+
+.project-item ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.project-item ul li {
+    margin-bottom: 0.5rem;
+    color: var(--light-text);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-info p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+    color: var(--secondary-color);
 }
