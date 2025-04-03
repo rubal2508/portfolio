@@ -206,13 +206,23 @@
             // Toggle mobile menu
             navToggle.addEventListener('click', function() {
                 navLinks.classList.toggle('active');
+                navToggle.classList.toggle('active');
             });
 
             // Close mobile menu when clicking a link
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.addEventListener('click', () => {
                     navLinks.classList.remove('active');
+                    navToggle.classList.remove('active');
                 });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
             });
         });
     </script>
