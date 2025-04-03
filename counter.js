@@ -1,26 +1,45 @@
+// Website hit counter functionality
 document.addEventListener("DOMContentLoaded", function() {
+    // DOM Elements
     const counterElement = document.getElementById('hitCounter');
     const apiEndpoint = 'https://qyxgmu3at7.execute-api.ap-southeast-2.amazonaws.com/default/aman_portfolio_hits_lambda_python';
 
+    // Function to update the hit counter display
+    function updateHitCounter(hits) {
+        if (counterElement) {
+            counterElement.textContent = `Number of website hits (Powered by Amazon Lambda): ${hits}`;
+        }
+    }
+
+    // Function to handle API errors
+    function handleError(error) {
+        console.error('Error:', error);
+        if (counterElement) {
+            counterElement.textContent = 'Error loading hit counter';
+        }
+    }
+
+    // Make API call to update hit counter
     fetch(apiEndpoint, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         }
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
-        console.log('Response:', data);
         if (data.updated_hits !== undefined) {
-            counterElement.textContent = `Number of website hits (Powered by Amazon Lambda):  ${data.updated_hits}`;
+            updateHitCounter(data.updated_hits);
         } else {
-            counterElement.textContent = 'Error loading hit counter';
+            throw new Error('Invalid response format');
         }
     })
-    .catch(error => {
-        console.error('Error:', error);
-        counterElement.textContent = 'Error loading hit counter';
-    });
+    .catch(handleError);
 });
 
 

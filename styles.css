@@ -1,6 +1,7 @@
+/* CSS Variables */
 :root {
-    --primary-color:  #00509d; /* #2563eb; */
-    --secondary-color: #00296b; /* #1e40af; */
+    --primary-color: #00509d;
+    --secondary-color: #00296b;
     --text-color: #1f2937;
     --light-text: #6b7280;
     --background: #f3f4f6;
@@ -9,6 +10,7 @@
     --navbar-height: 60px;
 }
 
+/* Base Styles */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     margin: 0;
@@ -19,6 +21,7 @@ body {
     padding-top: var(--navbar-height);
 }
 
+/* Navigation Styles */
 .navbar {
     position: fixed;
     top: 0;
@@ -64,6 +67,7 @@ body {
     color: var(--primary-color);
 }
 
+/* Navigation Link Underline Animation */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -79,6 +83,7 @@ body {
     width: 100%;
 }
 
+/* Mobile Navigation Toggle */
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -93,39 +98,7 @@ body {
     transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .nav-toggle {
-        display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: var(--navbar-height);
-        left: 0;
-        right: 0;
-        background-color: var(--card-bg);
-        flex-direction: column;
-        padding: 1rem 0;
-        gap: 1rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        width: 100%;
-        text-align: center;
-        padding: 0.5rem 0;
-    }
-
-    .nav-links a::after {
-        display: none;
-    }
-}
-
+/* Header/Hero Section */
 header {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: #fff;
@@ -148,6 +121,7 @@ header::before {
     pointer-events: none;
 }
 
+/* Profile Image Styles */
 header img {
     width: 200px;
     height: 200px;
@@ -165,6 +139,7 @@ header img:hover {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Header Text Styles */
 header h1 {
     margin: 0;
     font-size: 3rem;
@@ -182,6 +157,7 @@ header p {
     margin-right: auto;
 }
 
+/* Section Styles */
 section {
     padding: 2.5rem;
     margin: 1.5rem auto;
@@ -198,6 +174,7 @@ section:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Section Headings */
 section h2 {
     margin-top: 0;
     font-size: 2rem;
@@ -220,6 +197,7 @@ section h4 {
     color: #555;
 }
 
+/* List Styles */
 section ul {
     list-style-type: none;
     padding-left: 0;
@@ -258,6 +236,7 @@ section ul ul li:before {
     font-weight: normal;
 }
 
+/* Link Styles */
 a {
     color: var(--primary-color);
     text-decoration: none;
@@ -268,6 +247,7 @@ a:hover {
     color: var(--secondary-color);
 }
 
+/* Resume Links */
 .resume-links {
     display: flex;
     gap: 1rem;
@@ -296,6 +276,7 @@ a:hover {
     transform: translateY(-1px);
 }
 
+/* Contact Section */
 #contact p {
     margin: 0.75rem 0;
     display: flex;
@@ -308,6 +289,7 @@ a:hover {
     font-weight: 500;
 }
 
+/* Skills Section */
 #skills ul li {
     display: flex;
     flex-direction: column;
@@ -318,10 +300,12 @@ a:hover {
     color: var(--primary-color);
 }
 
+/* Experience Section */
 #experience ul li {
     margin-bottom: 1rem;
 }
 
+/* Projects Section */
 #projects p {
     margin: 1rem 0;
 }
@@ -332,64 +316,7 @@ a:hover {
     padding: 0.5rem 0;
 }
 
-footer {
-    background: rgba(255, 255, 255, 0.8);
-    color: var(--light-text);
-    text-align: center;
-    padding: 0.75rem 0;
-    width: 100%;
-    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(5px);
-    margin-top: 2rem;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-    font-weight: 400;
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 3rem 1rem;
-    }
-
-    header img {
-        width: 180px;
-        height: 180px;
-    }
-
-    header h1 {
-        font-size: 2.4rem;
-    }
-
-    header p {
-        font-size: 1.2rem;
-        padding: 0 1rem;
-    }
-
-    section {
-        padding: 1.5rem;
-        margin: 1rem;
-    }
-
-    .resume-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    #about a {
-        padding: 0.75rem 1rem;
-        max-width: 250px;
-    }
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: var(--navbar-height);
-}
-
+/* Project Items */
 .project-item {
     margin-bottom: 2rem;
     padding: 1.5rem;
@@ -456,6 +383,7 @@ html {
     color: var(--light-text);
 }
 
+/* Contact Info */
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -478,4 +406,100 @@ html {
 
 .contact-info a:hover {
     color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--light-text);
+    text-align: center;
+    padding: 0.75rem 0;
+    width: 100%;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(5px);
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--navbar-height);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        right: 0;
+        background-color: var(--card-bg);
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    /* Header */
+    header {
+        padding: 3rem 1rem;
+    }
+
+    header img {
+        width: 180px;
+        height: 180px;
+    }
+
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
+
+    /* Sections */
+    section {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    /* Resume Links */
+    .resume-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #about a {
+        padding: 0.75rem 1rem;
+        max-width: 250px;
+    }
 }

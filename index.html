@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFV9RZGYKF"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-EFV9RZGYKF');
     </script>
+
+    <!-- Meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aman Garg's Portfolio</title>
+
+    <!-- Stylesheets and favicon -->
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-content">
             <div class="nav-brand">AG</div>
@@ -27,6 +31,7 @@
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
+            <!-- Mobile menu toggle -->
             <div class="nav-toggle">
                 <span></span>
                 <span></span>
@@ -35,27 +40,33 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header>
         <img src="profilepic.jpg" alt="Aman Garg">
         <h1>Aman Garg</h1>
         <p>Software Engineer</p>
     </header>
 
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
         <p>I am a Software Engineer 3 at Walmart Global Tech with 4 years of experience in building scalable backend systems and optimizing engineering processes. My expertise lies in developing high-performance microservices, implementing efficient CI/CD pipelines, and designing robust distributed systems.</p>
+        
         <p>At Walmart, I've led multiple initiatives that have resulted in significant business impact, including:</p>
         <ul>
             <li>Optimized order processing system reducing latency by 40%</li>
             <li>Implemented automated testing framework reducing deployment failures by 60%</li>
             <li>Designed and developed microservices handling 1M+ daily transactions</li>
         </ul>
+
+        <!-- Resume and Booking Links -->
         <div class="resume-links">
             <a href="AmanGarg_BITSPilaniCSE_Walmart.pdf" target="_blank" rel="noopener noreferrer">View My Resume</a>
             <a href="https://topmate.io/aman_garg25" target="_blank" rel="noopener noreferrer">Book 1:1 with me</a>
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
         <h2>Technical Skills</h2>
         <ul>
@@ -79,9 +90,11 @@
         </ul>
     </section>
 
+    <!-- Experience Section -->
     <section id="experience">
         <h2>Work Experience</h2>
 
+        <!-- Walmart Experience -->
         <h3>Walmart Global Tech</h3>
         <ul>
             <li><strong>Software Engineer 3</strong> (Aug 2023 - Present)
@@ -107,6 +120,7 @@
             </li>
         </ul>
 
+        <!-- Vymo Experience -->
         <h3>Vymo</h3>
         <ul>
             <li><strong>Software Engineer Intern</strong> (Aug 2020 - Dec 2020)
@@ -119,9 +133,11 @@
         </ul>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
 
+        <!-- Online Shopping Assistant Project -->
         <div class="project-item">
             <h3><a href="https://github.com/rubal2508/Ctrl-Alt-Elite" target="_blank">Online Shopping Assistant with GenAI</a></h3>
             <p>Led a team of 4 to create an AI-powered voice assistant for e-commerce using ChatGPT APIs at a hackathon.</p>
@@ -133,6 +149,7 @@
             </ul>
         </div>
 
+        <!-- Instagram Bot Project -->
         <div class="project-item">
             <h3><a href="https://github.com/rubal2508/Project-InstaBot" target="_blank">Instagram Bot with Selenium</a></h3>
             <p>Developed an automation tool for Instagram using Selenium WebDriver.</p>
@@ -144,6 +161,7 @@
             </ul>
         </div>
 
+        <!-- Portfolio Website Project -->
         <div class="project-item">
             <h3><a href="https://github.com/rubal2508/portfolio" target="_blank">Portfolio Website</a></h3>
             <p>Built a responsive portfolio website using modern web technologies.</p>
@@ -156,6 +174,7 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
         <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
@@ -166,22 +185,25 @@
             <p>💻 GitHub: <a href="https://github.com/rubal2508" target="_blank">github.com/rubal2508</a></p>
         </div>
     </section>
+
+    <!-- Website Hit Counter -->
     <section>
         <p id="hitCounter">Loading...</p>
         <script src="counter.js"></script>
     </section>
-    <br><br><br><br>
 
+    <!-- Footer -->
     <footer>
         <p>Made with ❤️ using GenAI</p>
     </footer>
 
-
+    <!-- Mobile Navigation Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const navToggle = document.querySelector('.nav-toggle');
             const navLinks = document.querySelector('.nav-links');
 
+            // Toggle mobile menu
             navToggle.addEventListener('click', function() {
                 navLinks.classList.toggle('active');
             });
@@ -194,6 +216,5 @@
             });
         });
     </script>
-
 </body>
 </html>
