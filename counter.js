@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to update the hit counter display
     function updateHitCounter(hits) {
         if (counterElement) {
-            counterElement.textContent = `Number of website hits (Powered by Amazon Lambda & Amazon DynamoDB): ${hits}`;
+            counterElement.textContent = `${hits}`;
         }
     }
 
