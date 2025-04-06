@@ -537,3 +537,51 @@ html {
         max-width: 250px;
     }
 }
+
+/* Counter Styles */
+.counter {
+    display: inline-block;
+    font-family: 'SF Mono', 'Consolas', monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    background-color: rgba(0, 80, 157, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.counter::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.counter:hover::after {
+    opacity: 1;
+}
+
+.counter.updated {
+    animation: counterUpdate 0.5s ease-out;
+}
+
+@keyframes counterUpdate {
+    0% {
+        transform: translateY(-4px);
+        color: var(--secondary-color);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+    100% {
+        transform: translateY(0);
+        color: var(--primary-color);
+    }
+}

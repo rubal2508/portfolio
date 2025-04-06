@@ -7,7 +7,16 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to update the hit counter display
     function updateHitCounter(hits) {
         if (counterElement) {
-            counterElement.textContent = `${hits}`;
+            // Add animation class
+            counterElement.classList.add('updated');
+            
+            // Update the counter value
+            counterElement.textContent = hits;
+            
+            // Remove animation class after animation completes
+            setTimeout(() => {
+                counterElement.classList.remove('updated');
+            }, 500);
         }
     }
 
@@ -15,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function handleError(error) {
         console.error('Error:', error);
         if (counterElement) {
-            counterElement.textContent = 'Error loading hit counter';
+            counterElement.textContent = 'Error';
         }
     }
 
