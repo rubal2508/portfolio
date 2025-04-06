@@ -1,9 +1,0 @@
-I am a Software Engineer 3 at Walmart Global Tech with 4 years of experience in building scalable backend systems and optimizing engineering processes. My expertise lies in developing high-performance microservices, implementing efficient CI/CD pipelines, and designing robust distributed systems  
-
-I am a Software Engineer with 4+ years of experience building scalable backend applications.
-
-I have build this website using ChatGPT and Cursor AI, Amazon Lambda, Dynamo DB, Github ages
-
-What I am learning these days (gen AI)
-What I am reading
-WHat I am watching
