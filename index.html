@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics Tracking -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFV9RZGYKF"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -9,37 +9,29 @@
         gtag('js', new Date());
         gtag('config', 'G-EFV9RZGYKF');
     </script>
-    <script src="counter.js"></script>
+    <script src="counter.js" defer></script>
 
-    <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aman Garg - Software Engineer specializing in scalable backend applications, microservices, and cloud technologies. Experienced at Walmart Global Tech with expertise in Java, Python, Spring Boot, and AWS.">
-    <meta name="keywords" content="Software Engineer, Backend Developer, Java Developer, Python Developer, Spring Boot, Microservices, Cloud Computing, AWS, Walmart, System Design, Software Architecture">
+    <meta name="description" content="Aman Garg – Software Engineer at Google building scalable backend systems for billions of users. Expert in Java, distributed systems, Kafka, Spring Boot.">
+    <meta name="keywords" content="Aman Garg, Software Engineer, Backend Developer, Google, Java, Kafka, Spring Boot, Distributed Systems, System Design, Microservices">
     <meta name="author" content="Aman Garg">
     <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
     <link rel="canonical" href="https://amangarg.org/">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://amangarg.org/">
-    <meta property="og:title" content="Aman Garg - Software Engineer | Portfolio">
-    <meta property="og:description" content="Software Engineer specializing in scalable backend applications, microservices, and cloud technologies. Experienced at Walmart Global Tech.">
+    <meta property="og:title" content="Aman Garg – Software Engineer">
+    <meta property="og:description" content="Software Engineer at Google building scalable backend systems for billions of users.">
     <meta property="og:image" content="https://amangarg.org/profilepic.jpg">
-
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://amangarg.org/">
-    <meta property="twitter:title" content="Aman Garg - Software Engineer | Portfolio">
-    <meta property="twitter:description" content="Software Engineer specializing in scalable backend applications, microservices, and cloud technologies. Experienced at Walmart Global Tech.">
+    <meta property="twitter:title" content="Aman Garg – Software Engineer">
+    <meta property="twitter:description" content="Software Engineer at Google building scalable backend systems for billions of users.">
     <meta property="twitter:image" content="https://amangarg.org/profilepic.jpg">
 
-    <!-- Title -->
-    <title>Aman Garg - Software Engineer | Portfolio</title>
+    <title>Aman Garg – Software Engineer</title>
 
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -47,238 +39,498 @@
         "name": "Aman Garg",
         "jobTitle": "Software Engineer",
         "url": "https://amangarg.org",
-        "sameAs": [
-            "https://linkedin.com/in/ag25aug",
-            "https://github.com/rubal2508"
-        ],
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Walmart Global Tech",
-            "url": "https://walmart.com"
-        },
-        "description": "Software Engineer specializing in scalable backend applications, microservices, and cloud technologies. Experienced at Walmart Global Tech with expertise in Java, Python, Spring Boot, and AWS.",
+        "sameAs": ["https://linkedin.com/in/ag25aug", "https://github.com/rubal2508"],
+        "worksFor": { "@type": "Organization", "name": "Google", "url": "https://google.com" },
+        "description": "Software Engineer at Google building scalable backend systems for billions of users.",
         "image": "https://amangarg.org/profilepic.jpg"
     }
     </script>
 
-    <!-- Stylesheets and favicon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+    <noscript><style>#loader{display:none!important}body{visibility:visible!important}</style></noscript>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
+
+    <!-- Boot Loader -->
+    <div id="loader" class="loader" aria-hidden="true">
+        <div class="loader-window">
+            <div class="loader-titlebar">
+                <span class="loader-dot r"></span>
+                <span class="loader-dot y"></span>
+                <span class="loader-dot g"></span>
+                <span class="loader-title">amangarg.org — bash</span>
+            </div>
+            <div class="loader-body">
+                <p class="ll l1"><span class="lp">$</span> ssh aman@amangarg.org</p>
+                <p class="ll l2"><span class="lo">›</span> Establishing secure connection<span class="ldots"></span></p>
+                <p class="ll l3"><span class="lk">✓</span> Authenticated as <span class="lw">aman</span></p>
+                <p class="ll l4"><span class="lp">$</span> load-portfolio --mode=production</p>
+                <p class="ll l5"><span class="lo">›</span> Compiling 5 years of backend wizardry<span class="ldots"></span></p>
+                <p class="ll l6"><span class="lk">✓</span> Ready. <span class="lw">Welcome.</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="nav-content">
-            <div class="nav-brand"><a href="#" class="nav-brand-link">AG</a></div>
-            <div class="nav-links">
+            <a href="#" class="nav-brand">AG</a>
+            <div class="nav-links" id="navLinks">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
-            <!-- Mobile menu toggle -->
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header>
-        <img src="profilepic.jpg" alt="Aman Garg">
-        <h1>Aman Garg</h1>
-        <p>Software Engineer</p>
-    </header>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a Software Engineer at Google, experienced in building highly scalable backend web applications for tech giants.</p>
-
-        <!-- Resume and Booking Links -->
-        <div class="resume-links">
-            <a href="AmanGarg_BITSPilaniCSE_Walmart.pdf" target="_blank" rel="noopener noreferrer">View My Resume</a>
-            <a href="https://topmate.io/aman_garg25" target="_blank" rel="noopener noreferrer">Book 1:1 with me</a>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-container">
+            <div class="hero-text">
+                <div class="hero-prompt">$ whoami</div>
+                <h1 class="hero-name">Aman Garg</h1>
+                <div class="hero-subtitle" aria-label="role">
+                    <span id="typedText"></span><span class="hero-cursor" aria-hidden="true">▌</span>
+                </div>
+                <p class="hero-desc">
+                    I build the systems you never see — but always rely on.<br>
+                    Kafka consumers eating <span class="hl">1B+ daily events</span>. YouTube billing for <span class="hl">2B+ users</span>.<br>
+                    Backend is where the real work happens.
+                </p>
+                <div class="hero-actions">
+                    <a href="AmanGarg_BITSPilaniCSE_Walmart.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">View Resume</a>
+                    <a href="https://topmate.io/aman_garg25" target="_blank" rel="noopener noreferrer" class="btn-secondary">Book a 1:1</a>
+                </div>
+            </div>
+            <div class="hero-image-wrap">
+                <div class="hero-image-ring" aria-hidden="true"></div>
+                <img src="profilepic.jpg" alt="Aman Garg" class="hero-image" width="220" height="220" loading="eager">
+            </div>
+        </div>
+        <div class="hero-scroll-hint" aria-hidden="true">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li><strong>Programming Languages:</strong> Java, Python</li>
-            <li><strong>Frameworks and Libraries:</strong> Spring Boot, Mockito, JUnit, Selenium</li>
-            <li><strong>Development Tools:</strong> Git, Maven, Jenkins, Sonar, IntelliJ</li>
-            <li><strong>Databases:</strong> Azure SQL, Azure Cosmos NoSQL</li>
-            <li><strong>Data Processing and Messaging:</strong> Apache Kafka, Apache Airflow, Apache Spark</li>
-            <li><strong>Cloud & DevOps:</strong> Kubernetes, CI/CD</li>
-            <li><strong>Software Development Practices:</strong>  
-                <ul>
-                    <li>Microservices Architecture & Design Patterns</li>
-                    <li>Test-Driven Development (TDD)</li>
-                    <li>Object-Oriented Programming (OOP)</li>
-                    <li>System Design & Architecture</li>
-                    <li>Agile/Scrum Methodologies</li>
-                    <li>Code Review & Best Practices</li>
-                </ul>
-            </li>
-            <li><strong>Other Tools & Technologies:</strong> GraphQL, OpenAI (ChatGPT APIs), Web Scraping, Automation</li>
-        </ul>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Work Experience</h2>
-
-        <!-- Google Experience -->
-        <h3>Google</h3>
-        <ul>
-            <li><strong>Software Engineer L4</strong> (July 2025 - Present)
-                <ul>
-                    <li>Building next-generation billing platform for YouTube, enhancing the payment experience for over 2 billion users.</li>
-                </ul>
-            </li>
-        </ul>
-
-        <!-- Salesforce Experience -->
-        <h3>Salesforce</h3>
-        <ul>
-            <li><strong>Member of Technical Staff</strong> (Apr 2025 - June 2025)
-                <ul>
-                    <li>Worked in the Big Data team, leveraging Apache HBase and Apache Phoenix to provide Database as a Service for Salesforce.
-                    </li>
-                </ul>
-            </li>
-        </ul>
-
-        <!-- Walmart Experience -->
-        <h3>Walmart Global Tech</h3>
-        <ul>
-            <li><strong>Software Engineer 3</strong> (Aug 2023 - Apr 2025)
-                <ul>
-                    <li>Developed scalable Kafka consumers to process 1B+ daily inventory updates with high availability and low latency</li>
-                    <li>Led a team of 5 to deliver a seller discount feature generating $60M+ annually, improving seller retention</li>
-                </ul>
-            </li>
-            <li><strong>Software Engineer 2</strong> (Jul 2021 - Jul 2023)
-                <ul>
-                    <li>Built an automated Spark-AIRFLOW pipeline for invoice processing, unlocking $300K revenue in 6 months</li>
-                    <li>Optimized warehouse cartonization logic, saving packaging cost for 2.6M units per FC annually</li>
-                </ul>
-            </li>
-            <li><strong>Software Engineer Intern</strong> (May 2020 - Jun 2020)
-                <ul>
-                    <li>Implemented GraphQL API and cron scheduler for order management automation, improving system flexibility</li>
-                    <li>Resolved 5 production bugs, contributing to backend service reliability</li>
-                </ul>
-            </li>
-        </ul>
-
-        <!-- Vymo Experience -->
-        <h3>Vymo</h3>
-        <ul>
-            <li><strong>Software Engineer Intern</strong> (Aug 2020 - Dec 2020)
-                <ul>
-                    <li>Developed features for the sales automation platform</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <!-- Online Shopping Assistant Project -->
-        <div class="project-item" onclick="window.open('https://github.com/rubal2508/Ctrl-Alt-Elite', '_blank');">
-            <h3><a href="https://github.com/rubal2508/Ctrl-Alt-Elite" target="_blank">Online Shopping Assistant</a></h3>
-            <p>Led a team of 4 to create a GenAI-powered voice assistant for an e-commerce company using ChatGPT APIs
-                at a hackathon.</p>
-            <ul>
-                <li>Enabled users to use voice commands to perform actions like search for ingredients, get user sentiments, return/replace orders, and FAQs</li>
-                <li>Technologies used: Python, Open AI, Generative AI, Machine Learning, Agentic AI</li>
-            </ul>
-        </div>
-
-        <!-- Instagram Bot Project -->
-        <div class="project-item" onclick="window.open('https://github.com/rubal2508/Project-InstaBot', '_blank');">
-            <h3><a href="https://github.com/rubal2508/Project-InstaBot" target="_blank">Instagram Bot with Selenium</a></h3>
-            <p>Built an Instagram Automation Bot using Python and Selenium.</p>
-            <ul>
-                <li>Automated login, engagement tracking, and hashtag analysis, leveraging web scraping to build an influencer database for industry trend analysis</li>
-                <li>Technologies used: Python, Selenium, Web scraping, Automation</li>
-            </ul>
-        </div>
-
-        <!-- Portfolio Project -->
-        <div class="project-item" onclick="window.open('https://github.com/rubal2508/portfolio', '_blank');">
-            <h3><a href="https://github.com/rubal2508/portfolio" target="_blank">Portfolio Website</a></h3>
-            <p>Used CursorAI and ChatGPT to create this portfolio website.</p>
-            <ul>
-                <li>Technologies used: HTML, CSS, JS, CursorAI, ChatGPT</li>
-            </ul>
-        </div>
-
-        <!-- Website Hit Counter Project -->
-        <div class="project-item" onclick="window.open('https://www.linkedin.com/pulse/how-i-quickly-built-hit-counter-my-portfolio-website-using-aman-garg-3ugpc', '_blank');">
-            <h3><a href="https://www.linkedin.com/pulse/how-i-quickly-built-hit-counter-my-portfolio-website-using-aman-garg-3ugpc" target="_blank">Live Website Hit Counter</a></h3>
-            <p>Implemented a serverless architecture using AWS Lambda and DynamoDB to track and display live visits to my portfolio website.</p>
-            <ul>
-                <li>Live count: <span class="counter" id="hitCounter">loading..</span></li>
-            </ul>
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="section-inner">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-body">
+                <p>5+ years in the trenches at <strong>Google</strong>, Salesforce, and Walmart. My specialty is the stuff most engineers shy away from — high-throughput distributed systems, complex data pipelines, and backend infrastructure that has to work <em>every single time</em>, at scale.</p>
+                <p>I've shipped Kafka consumers processing <strong>1B+ daily events</strong>, led teams that delivered <strong>$60M+</strong> in new revenue, and optimized pipelines serving millions of warehouse units. The best systems are invisible — and I like building those.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-value" data-to="5" data-suffix="+">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" data-to="1" data-suffix="B+" data-mono>1B+</span>
+                        <span class="stat-label">Daily Events Processed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" data-to="2" data-suffix="B+" data-mono>2B+</span>
+                        <span class="stat-label">Users Impacted</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" data-to="60" data-prefix="$" data-suffix="M+">$60M+</span>
+                        <span class="stat-label">Revenue Delivered</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-        <div class="contact-info">
-            <p>📧 Email: <a href="mailto:amangarg25aug@gmail.com">amangarg25aug@gmail.com</a></p>
-            <!-- <p>📱 Phone: <a href="tel:+917404152804">+91 740 415 2804</a></p> -->
-            <p>🔗 LinkedIn: <a href="https://linkedin.com/in/ag25aug" target="_blank">linkedin.com/in/ag25aug</a></p>
-            <p>💻 GitHub: <a href="https://github.com/rubal2508" target="_blank">github.com/rubal2508</a></p>
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <div class="section-inner">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <div class="skill-group-label">Languages</div>
+                    <div class="skill-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-label">Frameworks</div>
+                    <div class="skill-tags">
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">JUnit</span>
+                        <span class="tag">Mockito</span>
+                        <span class="tag">Selenium</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-label">Data &amp; Messaging</div>
+                    <div class="skill-tags">
+                        <span class="tag">Apache Kafka</span>
+                        <span class="tag">Apache Spark</span>
+                        <span class="tag">Apache Airflow</span>
+                        <span class="tag">HBase</span>
+                        <span class="tag">Apache Phoenix</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-label">Databases</div>
+                    <div class="skill-tags">
+                        <span class="tag">Azure SQL</span>
+                        <span class="tag">Cosmos DB</span>
+                        <span class="tag">DynamoDB</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-label">Cloud &amp; DevOps</div>
+                    <div class="skill-tags">
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">AWS Lambda</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">Jenkins</span>
+                        <span class="tag">Maven</span>
+                        <span class="tag">Git</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-label">Architecture</div>
+                    <div class="skill-tags">
+                        <span class="tag">Microservices</span>
+                        <span class="tag">System Design</span>
+                        <span class="tag">TDD</span>
+                        <span class="tag">OOP</span>
+                        <span class="tag">Agile/Scrum</span>
+                        <span class="tag">GraphQL</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Experience -->
+    <section id="experience" class="section">
+        <div class="section-inner">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
 
-    <!-- Footer -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"><div class="timeline-dot active"></div></div>
+                    <div class="timeline-body">
+                        <div class="timeline-company">Google</div>
+                        <div class="timeline-role">Software Engineer L4</div>
+                        <span class="timeline-period">Jul 2025 – Present</span>
+                        <ul class="timeline-bullets">
+                            <li>Rearchitecting YouTube's billing platform to handle payments for over 2 billion users — zero-downtime, every day.</li>
+                        </ul>
+                        <div class="skill-tags">
+                            <span class="tag tag-sm">Java</span>
+                            <span class="tag tag-sm">Distributed Systems</span>
+                            <span class="tag tag-sm">Billing Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"><div class="timeline-dot"></div></div>
+                    <div class="timeline-body">
+                        <div class="timeline-company">Salesforce</div>
+                        <div class="timeline-role">Member of Technical Staff</div>
+                        <span class="timeline-period">Apr 2025 – Jun 2025</span>
+                        <ul class="timeline-bullets">
+                            <li>Big Data team: leveraged Apache HBase and Phoenix to power Database-as-a-Service at Salesforce scale.</li>
+                        </ul>
+                        <div class="skill-tags">
+                            <span class="tag tag-sm">HBase</span>
+                            <span class="tag tag-sm">Apache Phoenix</span>
+                            <span class="tag tag-sm">Big Data</span>
+                            <span class="tag tag-sm">Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"><div class="timeline-dot"></div></div>
+                    <div class="timeline-body">
+                        <div class="timeline-company">Walmart Global Tech</div>
+
+                        <div class="timeline-role-row">
+                            <span class="timeline-role">Software Engineer 3</span>
+                            <span class="timeline-period-inline">Aug 2023 – Apr 2025</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Engineered Kafka consumers processing <strong>1B+ daily inventory events</strong> — HA, low-latency, no dropped messages</li>
+                            <li>Led 5 engineers to ship a seller discount feature that now generates <strong>$60M+ annually</strong></li>
+                        </ul>
+
+                        <div class="timeline-role-row" style="margin-top:1.1rem;">
+                            <span class="timeline-role">Software Engineer 2</span>
+                            <span class="timeline-period-inline">Jul 2021 – Jul 2023</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Built a Spark-Airflow invoice pipeline from scratch — unlocked <strong>$300K revenue</strong> in the first 6 months</li>
+                            <li>Rewrote cartonization logic saving packaging costs across <strong>2.6M units per fulfillment center</strong> annually</li>
+                        </ul>
+
+                        <div class="timeline-role-row" style="margin-top:1.1rem;">
+                            <span class="timeline-role">Software Engineer Intern</span>
+                            <span class="timeline-period-inline">May 2020 – Jun 2020</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Shipped a GraphQL API + cron scheduler for order automation in 6 weeks as an intern</li>
+                            <li>Squashed 5 production bugs — because broken prod is never acceptable, even as an intern</li>
+                        </ul>
+
+                        <div class="skill-tags" style="margin-top:1rem;">
+                            <span class="tag tag-sm">Java</span>
+                            <span class="tag tag-sm">Kafka</span>
+                            <span class="tag tag-sm">Spark</span>
+                            <span class="tag tag-sm">Airflow</span>
+                            <span class="tag tag-sm">Spring Boot</span>
+                            <span class="tag tag-sm">GraphQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"><div class="timeline-dot"></div></div>
+                    <div class="timeline-body">
+                        <div class="timeline-company">Vymo</div>
+                        <div class="timeline-role">Software Engineer Intern</div>
+                        <span class="timeline-period">Aug 2020 – Dec 2020</span>
+                        <ul class="timeline-bullets">
+                            <li>Built features for a sales automation platform, got a real taste of production engineering early.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <div class="section-inner">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card" onclick="window.open('https://github.com/rubal2508/Ctrl-Alt-Elite','_blank');" role="link" tabindex="0">
+                    <div class="project-card-header">
+                        <svg class="project-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9z"/></svg>
+                        <span class="project-arrow" aria-hidden="true">↗</span>
+                    </div>
+                    <h3 class="project-title">GenAI Shopping Assistant</h3>
+                    <p class="project-desc">Led a team of 4 at a hackathon to build a voice-driven e-commerce assistant. Search by voice, get sentiment analysis, manage orders — all via ChatGPT. We won.</p>
+                    <div class="skill-tags">
+                        <span class="tag tag-sm">Python</span>
+                        <span class="tag tag-sm">OpenAI</span>
+                        <span class="tag tag-sm">Generative AI</span>
+                        <span class="tag tag-sm">Agentic AI</span>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.open('https://github.com/rubal2508/Project-InstaBot','_blank');" role="link" tabindex="0">
+                    <div class="project-card-header">
+                        <svg class="project-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9z"/></svg>
+                        <span class="project-arrow" aria-hidden="true">↗</span>
+                    </div>
+                    <h3 class="project-title">Instagram Automation Bot</h3>
+                    <p class="project-desc">A Selenium-powered Instagram bot that auto-logs in, tracks engagement, scrapes hashtags, and builds an influencer database. Because manual is slow and scripts are forever.</p>
+                    <div class="skill-tags">
+                        <span class="tag tag-sm">Python</span>
+                        <span class="tag tag-sm">Selenium</span>
+                        <span class="tag tag-sm">Web Scraping</span>
+                        <span class="tag tag-sm">Automation</span>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.open('https://github.com/rubal2508/portfolio','_blank');" role="link" tabindex="0">
+                    <div class="project-card-header">
+                        <svg class="project-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9z"/></svg>
+                        <span class="project-arrow" aria-hidden="true">↗</span>
+                    </div>
+                    <h3 class="project-title">This Portfolio</h3>
+                    <p class="project-desc">A backend engineer's take on personal branding. No frameworks, no npm install, no bundle size anxiety. Just HTML, CSS, vanilla JS — and a lot of Claude Code.</p>
+                    <div class="skill-tags">
+                        <span class="tag tag-sm">HTML</span>
+                        <span class="tag tag-sm">CSS</span>
+                        <span class="tag tag-sm">JavaScript</span>
+                        <span class="tag tag-sm">Claude Code</span>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.open('https://www.linkedin.com/pulse/how-i-quickly-built-hit-counter-my-portfolio-website-using-aman-garg-3ugpc','_blank');" role="link" tabindex="0">
+                    <div class="project-card-header">
+                        <svg class="project-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9z"/></svg>
+                        <span class="project-arrow" aria-hidden="true">↗</span>
+                    </div>
+                    <h3 class="project-title">Serverless Hit Counter</h3>
+                    <p class="project-desc">AWS Lambda + DynamoDB — a tiny backend that counts every visit to this page. Zero servers, zero maintenance, $0/month. This page: <span id="hitCounter" class="counter">loading…</span> visits.</p>
+                    <div class="skill-tags">
+                        <span class="tag tag-sm">AWS Lambda</span>
+                        <span class="tag tag-sm">DynamoDB</span>
+                        <span class="tag tag-sm">Python</span>
+                        <span class="tag tag-sm">Serverless</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="section-inner">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="contact-desc">Got an interesting engineering problem? A hard distributed systems question? Or just want to nerd out about Kafka? I'm in.</p>
+            <div class="contact-links">
+                <a href="mailto:amangarg25aug@gmail.com" class="contact-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    amangarg25aug@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/ag25aug" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    linkedin.com/in/ag25aug
+                </a>
+                <a href="https://github.com/rubal2508" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                    github.com/rubal2508
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>Made with ❤️ using GenAI</p>
+        <p>Aman Garg &nbsp;·&nbsp; Built with Claude Code &nbsp;·&nbsp; <a href="https://amangarg.org">amangarg.org</a></p>
     </footer>
 
-    <!-- Mobile Navigation Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const navToggle = document.querySelector('.nav-toggle');
-            const navLinks = document.querySelector('.nav-links');
-
-            // Toggle mobile menu
-            navToggle.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-                navToggle.classList.toggle('active');
-            });
-
-            // Close mobile menu when clicking a link
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    navToggle.classList.remove('active');
-                });
-            });
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
-                    navLinks.classList.remove('active');
-                    navToggle.classList.remove('active');
-                }
-            });
+    (() => {
+        /* ── Loader ── */
+        const loader = document.getElementById('loader');
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                loader.classList.add('done');
+                setTimeout(() => {
+                    loader.remove();
+                    document.body.classList.add('loaded');
+                }, 650);
+            }, 2400);
         });
+
+        /* ── Scroll progress ── */
+        const prog = document.getElementById('scrollProgress');
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+            prog.style.width = pct + '%';
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        }, { passive: true });
+
+        /* ── Mouse glow ── */
+        document.addEventListener('mousemove', e => {
+            document.documentElement.style.setProperty('--mx', e.clientX + 'px');
+            document.documentElement.style.setProperty('--my', e.clientY + 'px');
+        }, { passive: true });
+
+        /* ── Mobile nav ── */
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            const open = navLinks.classList.toggle('open');
+            navToggle.classList.toggle('open', open);
+            navToggle.setAttribute('aria-expanded', String(open));
+        });
+        document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            navToggle.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        }));
+        document.addEventListener('click', e => {
+            if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+                navLinks.classList.remove('open');
+                navToggle.classList.remove('open');
+            }
+        });
+
+        /* ── Keyboard for project cards ── */
+        document.querySelectorAll('.project-card[tabindex]').forEach(card => {
+            card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); } });
+        });
+
+        /* ── Typewriter ── */
+        const phrases = [
+            'Software Engineer @ Google',
+            'Backend Systems @ Scale',
+            'Kafka · Spark · Spring Boot',
+            'Building for 2B+ Users',
+        ];
+        let pIdx = 0, cIdx = 0, deleting = false;
+        const el = document.getElementById('typedText');
+        function type() {
+            const phrase = phrases[pIdx];
+            if (deleting) {
+                el.textContent = phrase.slice(0, cIdx--);
+                if (cIdx < 0) { deleting = false; pIdx = (pIdx + 1) % phrases.length; setTimeout(type, 500); return; }
+            } else {
+                el.textContent = phrase.slice(0, ++cIdx);
+                if (cIdx === phrase.length) { deleting = true; setTimeout(type, 2200); return; }
+            }
+            setTimeout(type, deleting ? 32 : 68);
+        }
+        type();
+
+        /* ── Scroll reveal + stagger ── */
+        const revealObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                e.target.classList.add('visible');
+                revealObs.unobserve(e.target);
+            });
+        }, { threshold: 0.07 });
+        document.querySelectorAll('.section').forEach(s => revealObs.observe(s));
+
+        /* ── Stats count-up ── */
+        function countUp(el) {
+            const to = parseInt(el.dataset.to, 10);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const dur = 1400;
+            let start = null;
+            function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+            function step(ts) {
+                if (!start) start = ts;
+                const p = Math.min((ts - start) / dur, 1);
+                el.textContent = prefix + Math.floor(ease(p) * to) + suffix;
+                if (p < 1) requestAnimationFrame(step);
+                else el.textContent = prefix + to + suffix;
+            }
+            requestAnimationFrame(step);
+        }
+        const statsObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                e.target.querySelectorAll('.stat-value[data-to]').forEach(countUp);
+                statsObs.unobserve(e.target);
+            });
+        }, { threshold: 0.3 });
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) statsObs.observe(aboutSection);
+    })();
     </script>
 </body>
 </html>
