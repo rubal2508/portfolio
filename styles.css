@@ -825,41 +825,52 @@ footer a:hover { color: var(--accent); }
    LIGHT MODE
 ═══════════════════════════════════════ */
 [data-theme="light"] {
-    --bg: #ffffff;
-    --surface: #f6f8fa;
-    --surface-raised: #eaeef2;
-    --border: #d0d7de;
-    --accent: #0969da;
-    --accent-dim: rgba(9, 105, 218, 0.1);
-    --green: #1a7f37;
-    --text: #1f2328;
-    --text-muted: #57606a;
-    --text-subtle: #8c959f;
+    --bg: #faf7f2;
+    --surface: #f2ece2;
+    --surface-raised: #e8e0d4;
+    --border: #d4cbbe;
+    --accent: #b45309;
+    --accent-dim: rgba(180, 83, 9, 0.1);
+    --green: #c2410c;
+    --text: #1c1917;
+    --text-muted: #57534e;
+    --text-subtle: #a8a29e;
 }
 
 [data-theme="light"] body::before {
     background: radial-gradient(700px circle at var(--mx) var(--my),
-        rgba(9, 105, 218, 0.04), transparent 50%);
+        rgba(180, 83, 9, 0.06), transparent 50%);
 }
 
 [data-theme="light"] .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(250, 247, 242, 0.88);
 }
 
 [data-theme="light"] .nav-links {
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(250, 247, 242, 0.97);
+}
+
+[data-theme="light"] .hero-bg::before {
+    background-image: radial-gradient(circle, rgba(0,0,0,0.07) 1px, transparent 1px);
+    background-size: 32px 32px;
 }
 
 [data-theme="light"] .hero-bg::after {
-    background: radial-gradient(circle, rgba(9, 105, 218, 0.07) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(180, 83, 9, 0.07) 0%, transparent 70%);
 }
 
 [data-theme="light"] .loader {
-    background: #ffffff;
+    background: #faf7f2;
 }
 
 [data-theme="light"] .loader-window {
-    box-shadow: 0 24px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.05);
+}
+
+/* Active timeline dot in light mode uses amber glow */
+[data-theme="light"] .timeline-dot.active {
+    animation: none;
+    box-shadow: 0 0 0 3px rgba(180, 83, 9, 0.15);
 }
 
 /* Smooth theme switch — only active during toggle */
