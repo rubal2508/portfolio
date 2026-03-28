@@ -826,6 +826,86 @@ footer a:hover { color: var(--accent); }
     .loader-window { border-radius: 0; }
 }
 
+/* ═══════════════════════════════════════
+   LIGHT MODE
+═══════════════════════════════════════ */
+[data-theme="light"] {
+    --bg: #ffffff;
+    --surface: #f6f8fa;
+    --surface-raised: #eaeef2;
+    --border: #d0d7de;
+    --accent: #0969da;
+    --accent-dim: rgba(9, 105, 218, 0.1);
+    --green: #1a7f37;
+    --text: #1f2328;
+    --text-muted: #57606a;
+    --text-subtle: #8c959f;
+}
+
+[data-theme="light"] body::before {
+    background: radial-gradient(700px circle at var(--mx) var(--my),
+        rgba(9, 105, 218, 0.04), transparent 50%);
+}
+
+[data-theme="light"] .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.88);
+}
+
+[data-theme="light"] .nav-links {
+    background: rgba(255, 255, 255, 0.97);
+}
+
+[data-theme="light"] .hero-bg::after {
+    background: radial-gradient(circle, rgba(9, 105, 218, 0.07) 0%, transparent 70%);
+}
+
+[data-theme="light"] .loader {
+    background: #ffffff;
+}
+
+[data-theme="light"] .loader-window {
+    box-shadow: 0 24px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06);
+}
+
+/* Smooth theme switch — only active during toggle */
+.theme-transitioning,
+.theme-transitioning * {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease !important;
+}
+
+/* ═══════════════════════════════════════
+   THEME TOGGLE BUTTON
+═══════════════════════════════════════ */
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.38rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+    flex-shrink: 0;
+}
+.theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-dim);
+}
+.theme-toggle svg { width: 16px; height: 16px; display: block; }
+
+/* Icon visibility: dark mode shows sun, light mode shows moon */
+.icon-sun  { display: block; }
+.icon-moon { display: none; }
+[data-theme="light"] .icon-sun  { display: none; }
+[data-theme="light"] .icon-moon { display: block; }
+
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
