@@ -885,6 +885,17 @@ footer a:hover { color: var(--accent); }
     opacity: 1;
 }
 
+/* Touch devices: apply hover styles permanently (no hover support) */
+@media (hover: none) {
+    .project-card {
+        border-color: var(--accent);
+    }
+    .project-card::before {
+        opacity: 1 !important;
+    }
+    .tag:hover { background: transparent; color: var(--text-muted); border-color: var(--border); }
+}
+
 /* Smooth theme switch — only active during toggle */
 .theme-transitioning,
 .theme-transitioning * {
