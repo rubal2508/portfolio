@@ -669,7 +669,7 @@ body.loaded .hero-image-wrap { animation: heroIn 0.7s ease 0.3s both; }
     opacity: 0; transition: opacity 0.25s;
 }
 .project-card:hover {
-    border-color: rgba(88,166,255,0.5);
+    border-color: var(--accent);
     transform: translateY(-4px);
     background: var(--surface-raised);
     box-shadow: 0 16px 40px rgba(0,0,0,0.3);
@@ -871,6 +871,18 @@ footer a:hover { color: var(--accent); }
 [data-theme="light"] .timeline-dot.active {
     animation: none;
     box-shadow: 0 0 0 3px rgba(159, 18, 57, 0.15);
+}
+
+/* Project card hover overrides for light mode */
+[data-theme="light"] .project-card:hover {
+    box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+}
+[data-theme="light"] .project-card::before {
+    background: linear-gradient(90deg, var(--accent), var(--green));
+    opacity: 0.15; /* subtle always-visible top line */
+}
+[data-theme="light"] .project-card:hover::before {
+    opacity: 1;
 }
 
 /* Smooth theme switch — only active during toggle */
